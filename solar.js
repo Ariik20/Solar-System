@@ -52,7 +52,7 @@ const planetsNumbers = (number) => {
     //first remove the known element
     planetBox.innerHTML = "";
     //for the image
-    allOverPic.src = "./earth.png";
+    allOverPic.src = "./IMAGES/earth.png";
     // earthPicture.classList.add("images")
 
     //for the div and calcaltions
@@ -67,7 +67,7 @@ const planetsNumbers = (number) => {
     planetBox.innerHTML = "";
 
     //for the image
-    allOverPic.src = "./mercury.png";
+    allOverPic.src = "./IMAGES/mercury.png";
     // earthPicture.classList.add("images")
 
     //for the div and calcaltions
@@ -82,7 +82,7 @@ const planetsNumbers = (number) => {
     planetBox.innerHTML = "";
 
     //for the image
-    allOverPic.src = "./venus.png";
+    allOverPic.src = "./IMAGES/venus.png";
     // earthPicture.classList.add("images")
     worded.textContent = "The weight on venus is ";
 
@@ -97,7 +97,7 @@ const planetsNumbers = (number) => {
     planetBox.innerHTML = "";
 
     //for the image
-    allOverPic.src = "./neptune.png";
+    allOverPic.src = "./IMAGES/neptune.png";
     // earthPicture.classList.add("images")
 
     //for the div and calcaltions
