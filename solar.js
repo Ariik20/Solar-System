@@ -1,13 +1,9 @@
-// const when = document.querySelector(".when");
-// let planet = document.querySelector("input");
 let input = document.querySelector("input");
 let planets = document.querySelector(".planets");
-// let selectedPlanet = planets.value;
 
 //get the button
 const button = document.querySelector(".button");
 
-//major culprits
 const planetBox = document.querySelector(".imageBox");
 const planetChildren = document.querySelector("img");
 const deleteImage = (desiredOutPut) => {
@@ -26,7 +22,7 @@ const planetsNumbers = (number) => {
   let mercury = ((5 / 9) * number).toFixed(1);
   let venus = ((3 / 9) * number).toFixed(1);
   let neptune = ((4 / 9) * number).toFixed(1);
-  //The changes on the modern
+  //The changes on the modern box
   const calCulationDiv = document.createElement("div");
   const allOverPic = document.createElement("img");
   allOverPic.classList.add("images");
@@ -50,7 +46,6 @@ const planetsNumbers = (number) => {
   calCulationDiv.classList.add("flexDiv");
   // calCulationDiv.appendChild(weight);
 
-  // const insideOfCalDiv
   // planetBox.removeChild(planetChildren);
   if (planets.value == "noPlanet") deleteImage("Enter planet");
   else if (planets.value === "earth") {
@@ -67,7 +62,6 @@ const planetsNumbers = (number) => {
 
     planetBox.appendChild(allOverPic);
     planetBox.appendChild(calCulationDiv);
-    // reset();
   } else if (planets.value === "mercury") {
     // planetBox.removeChild(planetChildren);
     planetBox.innerHTML = "";
@@ -83,7 +77,6 @@ const planetsNumbers = (number) => {
 
     planetBox.appendChild(allOverPic);
     planetBox.appendChild(calCulationDiv);
-    // reset();
   } else if (planets.value === "venus") {
     // planetBox.removeChild(planetChildren);
     planetBox.innerHTML = "";
@@ -116,8 +109,6 @@ const planetsNumbers = (number) => {
     planetBox.appendChild(calCulationDiv);
     // reset();
   }
-  // input.value = "";
-  // planets.value = "noPlanet";
 };
 
 //THE OVERALL FUNCTION
@@ -130,5 +121,4 @@ const massMissing = () => {
 
 button.addEventListener("click", (e) => {
   massMissing();
-  //reset
 });
