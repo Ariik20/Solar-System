@@ -20,13 +20,9 @@ const deleteImage = (desiredOutPut) => {
   planetBox.appendChild(desired);
 };
 
-//calculations on planets
-const planetsNumbers = (number) => {
-  let earth = ((9 / 5) * number).toFixed(1);
-  let mercury = ((5 / 9) * number).toFixed(1);
-  let venus = ((3 / 9) * number).toFixed(1);
-  let neptune = ((4 / 9) * number).toFixed(1);
-  //The changes on the modern
+const homeses = (pathimage, nameOfPlanet, sweight) => {
+  const planetBox = document.querySelector(".imageBox");
+  // const planetChildren = document.querySelector("img");
   const calCulationDiv = document.createElement("div");
   const allOverPic = document.createElement("img");
   allOverPic.classList.add("images");
@@ -37,84 +33,47 @@ const planetsNumbers = (number) => {
   worded.style.color = "white";
   // worded.textContent = "The weight on earth is ";
   weight.classList.add("rounded");
-  weight.style.color = "white";
-  weight.style.fontWeight = "bold";
-  weight.style.fontSize = "24px";
-
-  // divContent.appendChild(worded);
-
   divContent.appendChild(weight);
   divContent.classList.add("divContent");
   calCulationDiv.appendChild(worded);
   calCulationDiv.appendChild(divContent);
   calCulationDiv.classList.add("flexDiv");
-  // calCulationDiv.appendChild(weight);
 
-  // const insideOfCalDiv
-  // planetBox.removeChild(planetChildren);
-  if (planets.value == "noPlanet") deleteImage("Enter planet");
-  else if (planets.value === "earth") {
-    //first remove the known element
-    planetBox.innerHTML = "";
-    //for the image
-    allOverPic.src = "./earth.png";
-    // earthPicture.classList.add("images")
+  //replacements
+  planetBox.innerHTML = "";
+  //for the image
+  allOverPic.src = pathimage;
+  // earthPicture.classList.add("images")
 
-    //for the div and calcaltions
-    worded.textContent = "The weight on earth is ";
+  //for the div and calcaltions
+  worded.textContent = `The weight on ${nameOfPlanet} is `;
 
-    weight.textContent = `${earth}`;
+  weight.textContent = `${sweight}`;
 
-    planetBox.appendChild(allOverPic);
-    planetBox.appendChild(calCulationDiv);
-    // reset();
+  planetBox.appendChild(allOverPic);
+  planetBox.appendChild(calCulationDiv);
+};
+
+const obj = {
+  earthMass: 9 / 5,
+  mercuryMass: 5 / 9,
+  venusMass: 3 / 9,
+  neptuneMass: 4 / 9,
+};
+//calculations on planets
+const planetsNumbers = (number) => {
+  // if (planets.value == "noPlanet") deleteImage("Enter planet");
+  // else if (planets.value === "noPlanet" && input.value === "")
+  //   deleteImage("Enter a Mass & a Planet");
+  if (planets.value === "earth") {
+    homeses("./earth.png", "earth", (obj.earthMass * number).toFixed(1));
   } else if (planets.value === "mercury") {
-    // planetBox.removeChild(planetChildren);
-    planetBox.innerHTML = "";
-
-    //for the image
-    allOverPic.src = "./mercury.png";
-    // earthPicture.classList.add("images")
-
-    //for the div and calcaltions
-    worded.textContent = "The weight on mercury is ";
-
-    weight.textContent = ` ${mercury}`;
-
-    planetBox.appendChild(allOverPic);
-    planetBox.appendChild(calCulationDiv);
-    // reset();
+    homeses("./mercury.png", "mercury", (obj.mercuryMass * number).toFixed(1));
   } else if (planets.value === "venus") {
     // planetBox.removeChild(planetChildren);
-    planetBox.innerHTML = "";
-
-    //for the image
-    allOverPic.src = "./venus.png";
-    // earthPicture.classList.add("images")
-    worded.textContent = "The weight on venus is ";
-
-    //for the div and calcaltions
-    weight.textContent = `${venus}`;
-
-    planetBox.appendChild(allOverPic);
-    planetBox.appendChild(calCulationDiv);
-    // reset();
+    homeses("./venus.png", "venus", (obj.venusMass * number).toFixed(1));
   } else {
-    // planetBox.removeChild(planetChildren);
-    planetBox.innerHTML = "";
-
-    //for the image
-    allOverPic.src = "./neptune.png";
-    // earthPicture.classList.add("images")
-
-    //for the div and calcaltions
-    worded.textContent = "The weight on neptune is ";
-
-    weight.textContent = `${neptune}`;
-
-    planetBox.appendChild(allOverPic);
-    planetBox.appendChild(calCulationDiv);
-    // reset();
+    homeses("./neptune.png", "neptune", (obj.neptuneMass * number).toFixed(1));
   }
   // input.value = "";
   // planets.value = "noPlanet";
@@ -124,11 +83,12 @@ const planetsNumbers = (number) => {
 
 const massMissing = () => {
   if (input.value === "") deleteImage("Enter a number");
+  else if (planets.value === "noPlanet") deleteImage("Enter planet");
+  else if (planets.value == "noPlanet" && input.value === "")
+    deleteImage("Enter a Mass & a Planet");
   else planetsNumbers(Number(input.value));
-  // planets.value = "noPlanet";
 };
 
 button.addEventListener("click", (e) => {
   massMissing();
-  //reset
 });
