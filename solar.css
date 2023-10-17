@@ -73,3 +73,8 @@ select {
 .flexDiv {
   padding: 20% 0 0 10px;
 }
+.rounded {
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+}
