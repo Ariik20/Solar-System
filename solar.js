@@ -54,13 +54,21 @@ const obj = {
 //calculations on planets
 const planetsNumbers = (number) => {
   if (planets.value === "earth") {
-    homeses("./earth.png", "earth", (obj.earthMass * number).toFixed(1));
+    homeses("./IMAGES/earth.png", "earth", (obj.earthMass * number).toFixed(1));
   } else if (planets.value === "mercury") {
-    homeses("./mercury.png", "mercury", (obj.mercuryMass * number).toFixed(1));
+    homeses(
+      "./IMAGES/mercury.png",
+      "mercury",
+      (obj.mercuryMass * number).toFixed(1)
+    );
   } else if (planets.value === "venus") {
-    homeses("./venus.png", "venus", (obj.venusMass * number).toFixed(1));
+    homeses("./IMAGES/venus.png", "venus", (obj.venusMass * number).toFixed(1));
   } else {
-    homeses("./neptune.png", "neptune", (obj.neptuneMass * number).toFixed(1));
+    homeses(
+      "./IMAGES/neptune.png",
+      "neptune",
+      (obj.neptuneMass * number).toFixed(1)
+    );
   }
 };
 
