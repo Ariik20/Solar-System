@@ -84,11 +84,7 @@ const planetsNumbers = (number) => {
       (obj.jupiterMass * number).toFixed(1)
     );
   } else if (planets.value === "pluto") {
-    homeses(
-      "./IMAGES/pluto.png",
-      "pluto",
-      (obj.neptuneMass * number).toFixed(1)
-    );
+    homeses("./IMAGES/pluto.png", "pluto", (obj.plutoMass * number).toFixed(1));
   } else if (planets.value === "saturn") {
     homeses(
       "./IMAGES/saturn.png",
@@ -99,7 +95,7 @@ const planetsNumbers = (number) => {
     homeses(
       "./IMAGES/uranus.png",
       "uranus",
-      (obj.saturnMass * number).toFixed(1)
+      (obj.uranusMass * number).toFixed(1)
     );
   } else {
     homeses("./IMAGES/moon.png", "moon", (obj.moonMass * number).toFixed(1));
