@@ -39,17 +39,23 @@ const homeses = (pathimage, nameOfPlanet, sweight) => {
   allOverPic.src = pathimage;
   worded.textContent = `The weight on ${nameOfPlanet} is `;
 
-  weight.textContent = `${sweight}`;
+  weight.textContent = `${sweight}N`;
 
   planetBox.appendChild(allOverPic);
   planetBox.appendChild(calCulationDiv);
 };
 
 const obj = {
-  earthMass: 9 / 5,
-  mercuryMass: 5 / 9,
-  venusMass: 3 / 9,
-  neptuneMass: 4 / 9,
+  earthMass: 9.81,
+  mercuryMass: 3.7,
+  venusMass: 8.8,
+  neptuneMass: 11.15,
+  marsMass: 3.7,
+  jupiterMass: 24.79,
+  plutoMass: 0.62,
+  saturnMass: 10.4,
+  uranusMass: 8.69,
+  moonMass: 1.625,
 };
 //calculations on planets
 const planetsNumbers = (number) => {
@@ -63,12 +69,40 @@ const planetsNumbers = (number) => {
     );
   } else if (planets.value === "venus") {
     homeses("./IMAGES/venus.png", "venus", (obj.venusMass * number).toFixed(1));
-  } else {
+  } else if (planets.value === "neptune") {
     homeses(
       "./IMAGES/neptune.png",
       "neptune",
       (obj.neptuneMass * number).toFixed(1)
     );
+  } else if (planets.value === "mars") {
+    homeses("./IMAGES/mars.png", "mars", (obj.marsMass * number).toFixed(1));
+  } else if (planets.value === "jupiter") {
+    homeses(
+      "./IMAGES/jupiter.png",
+      "jupiter",
+      (obj.jupiterMass * number).toFixed(1)
+    );
+  } else if (planets.value === "pluto") {
+    homeses(
+      "./IMAGES/pluto.png",
+      "pluto",
+      (obj.neptuneMass * number).toFixed(1)
+    );
+  } else if (planets.value === "saturn") {
+    homeses(
+      "./IMAGES/saturn.png",
+      "saturn",
+      (obj.saturnMass * number).toFixed(1)
+    );
+  } else if (planets.value === "uranus") {
+    homeses(
+      "./IMAGES/uranus.png",
+      "uranus",
+      (obj.saturnMass * number).toFixed(1)
+    );
+  } else {
+    homeses("./IMAGES/moon.png", "moon", (obj.moonMass * number).toFixed(1));
   }
 };
 
