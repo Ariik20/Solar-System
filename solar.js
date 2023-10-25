@@ -105,10 +105,10 @@ const planetsNumbers = (number) => {
 //THE OVERALL FUNCTION
 
 const massMissing = () => {
-  if (input.value === "") deleteImage("Enter a number");
+  if (planets.value === "noPlanet" && input.value === "")
+    deleteImage("Enter  mass and  planet");
+  else if (input.value === "") deleteImage("Enter a number");
   else if (planets.value === "noPlanet") deleteImage("Enter planet");
-  else if (planets.value == "noPlanet" && input.value === "")
-    deleteImage("Enter a Mass & a Planet");
   else planetsNumbers(Number(input.value));
 };
 
