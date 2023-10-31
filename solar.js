@@ -115,4 +115,7 @@ const massMissing = () => {
 
 button.addEventListener("click", (e) => {
   massMissing();
+  //reset the input values
+  input.value = "";
+  planets.value = "noPlanet";
 });
