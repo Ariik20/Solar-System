@@ -108,6 +108,7 @@ const massMissing = () => {
   if (planets.value === "noPlanet" && input.value === "")
     deleteImage("Enter  mass and  planet");
   else if (input.value === "") deleteImage("Enter a number");
+  else if (isNaN(input.value)) deleteImage("Please enter a number");
   else if (planets.value === "noPlanet") deleteImage("Enter planet");
   else planetsNumbers(Number(input.value));
 };
