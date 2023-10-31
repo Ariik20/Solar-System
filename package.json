@@ -1,0 +1,19 @@
+{
+  "name": "solarsys",
+  "version": "1.0.0",
+  "description": "Weight of an object on a planet",
+  "main": "solar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ariik20/Solar-System.git"
+  },
+  "author": "Ariik Kook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ariik20/Solar-System/issues"
+  },
+  "homepage": "https://github.com/Ariik20/Solar-System#readme"
+}
