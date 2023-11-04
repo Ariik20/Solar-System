@@ -16,7 +16,7 @@ const deleteImage = (desiredOutPut) => {
   planetBox.appendChild(desired);
 };
 
-const homeses = (pathimage, nameOfPlanet, sweight) => {
+const replacePlanet = (pathimage, nameOfPlanet, sweight) => {
   const planetBox = document.querySelector(".imageBox");
   const calCulationDiv = document.createElement("div");
   const allOverPic = document.createElement("img");
@@ -60,45 +60,65 @@ const obj = {
 //calculations on planets
 const planetsNumbers = (number) => {
   if (planets.value === "earth") {
-    homeses("./IMAGES/earth.png", "earth", (obj.earthMass * number).toFixed(1));
+    replacePlanet(
+      "./IMAGES/earth.png",
+      "earth",
+      (obj.earthMass * number).toFixed(1)
+    );
   } else if (planets.value === "mercury") {
-    homeses(
+    replacePlanet(
       "./IMAGES/mercury.png",
       "mercury",
       (obj.mercuryMass * number).toFixed(1)
     );
   } else if (planets.value === "venus") {
-    homeses("./IMAGES/venus.png", "venus", (obj.venusMass * number).toFixed(1));
+    replacePlanet(
+      "./IMAGES/venus.png",
+      "venus",
+      (obj.venusMass * number).toFixed(1)
+    );
   } else if (planets.value === "neptune") {
-    homeses(
+    replacePlanet(
       "./IMAGES/neptune.png",
       "neptune",
       (obj.neptuneMass * number).toFixed(1)
     );
   } else if (planets.value === "mars") {
-    homeses("./IMAGES/mars.png", "mars", (obj.marsMass * number).toFixed(1));
+    replacePlanet(
+      "./IMAGES/mars.png",
+      "mars",
+      (obj.marsMass * number).toFixed(1)
+    );
   } else if (planets.value === "jupiter") {
-    homeses(
+    replacePlanet(
       "./IMAGES/jupiter.png",
       "jupiter",
       (obj.jupiterMass * number).toFixed(1)
     );
   } else if (planets.value === "pluto") {
-    homeses("./IMAGES/pluto.png", "pluto", (obj.plutoMass * number).toFixed(1));
+    replacePlanet(
+      "./IMAGES/pluto.png",
+      "pluto",
+      (obj.plutoMass * number).toFixed(1)
+    );
   } else if (planets.value === "saturn") {
-    homeses(
+    replacePlanet(
       "./IMAGES/saturn.png",
       "saturn",
       (obj.saturnMass * number).toFixed(1)
     );
   } else if (planets.value === "uranus") {
-    homeses(
+    replacePlanet(
       "./IMAGES/uranus.png",
       "uranus",
       (obj.uranusMass * number).toFixed(1)
     );
   } else {
-    homeses("./IMAGES/moon.png", "moon", (obj.moonMass * number).toFixed(1));
+    replacePlanet(
+      "./IMAGES/moon.png",
+      "moon",
+      (obj.moonMass * number).toFixed(1)
+    );
   }
 };
 
