@@ -6,6 +6,8 @@ const button = document.querySelector(".button");
 
 const planetBox = document.querySelector(".imageBox");
 const planetChildren = document.querySelector("img");
+
+//fn for checking state
 const deleteImage = (desiredOutPut) => {
   planetBox.innerHTML = "";
   const desired = document.createElement("p");
