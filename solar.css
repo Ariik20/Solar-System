@@ -11,12 +11,15 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-family: "Press Start 2P", "cursive";
+  font-size: 20px;
   color: beige;
   text-align: center;
   font-weight: bolder;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 1.5em;
+  line-height: 30px;
 }
 
 .textBox {
@@ -30,20 +33,29 @@ h1 {
 .button {
   color: white;
   font-weight: bolder;
-  background-color: rgba(255, 255, 255, 0.288);
+  background-color: #ffffff4f;
   padding: 5px;
   margin-left: 10px;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  border-radius: 5px;
+  border: 2px solid #154e8b;
+>>>>>>> version2
 }
 .imageBox {
-  background-color: #ffffff38;
+  background-color: #ffffff4f;
   padding: 1em;
   width: 80%;
   max-width: 850px;
   display: flex;
   justify-content: center;
-  margin: 70px auto;
+  margin: 50px auto;
   border-radius: 5px;
+<<<<<<< HEAD
+=======
+  border: 2px solid #154e8b;
+>>>>>>> version2
 }
 
 .input {
