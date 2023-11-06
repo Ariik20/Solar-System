@@ -37,6 +37,7 @@ h1 {
   padding: 5px;
   margin-left: 10px;
   cursor: pointer;
+  border: 2px solid #154e8b;
 }
 .imageBox {
   background-color: #ffffff4f;
@@ -47,6 +48,7 @@ h1 {
   justify-content: center;
   margin: 50px auto;
   border-radius: 5px;
+  border: 2px solid #154e8b;
 }
 
 .input {
