@@ -18,6 +18,7 @@ const deleteImage = (desiredOutPut) => {
   planetBox.appendChild(desired);
 };
 
+//fn to add image and mass of planet
 const replacePlanet = (pathimage, nameOfPlanet, sweight) => {
   const planetBox = document.querySelector(".imageBox");
   const calCulationDiv = document.createElement("div");
@@ -47,6 +48,7 @@ const replacePlanet = (pathimage, nameOfPlanet, sweight) => {
   planetBox.appendChild(calCulationDiv);
 };
 
+//obj for gravity
 const obj = {
   earthMass: 9.81,
   mercuryMass: 3.7,
@@ -124,8 +126,7 @@ const planetsNumbers = (number) => {
   }
 };
 
-//THE OVERALL FUNCTION
-
+//The overall fn
 const massMissing = () => {
   if (planets.value === "noPlanet" && input.value === "")
     deleteImage("Enter  mass and  planet");
