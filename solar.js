@@ -41,6 +41,7 @@ const replacePlanet = (pathimage, nameOfPlanet, sweight) => {
   //for the image
   allOverPic.src = pathimage;
   worded.textContent = `The weight on ${nameOfPlanet} is `;
+  worded.style.fontSize = "20px";
 
   weight.textContent = `${sweight}N`;
 
