@@ -75,9 +75,10 @@ select {
   justify-content: center;
 }
 .flexDiv {
-  padding: 20% 0 0 10px;
+  padding: 20% 0 0 35px;
 }
 .rounded {
+  margin-top: 10px;
   color: white;
   font-weight: bold;
   font-size: 26px;
