@@ -2,10 +2,9 @@
   "name": "solarsys",
   "version": "1.0.0",
   "description": "Weight of an object on a planet",
-  "main": "solar.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "index.html"
   },
   "repository": {
     "type": "git",
